@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: CIMR DEVALGO ATBD Template
-author: CIMR DEVALGO team
+title: CIMR L2 Sea Ice Concentration ATBD v1
+author: Thomas Lavergne, Norwegian Meteorological Institute
 logo: logo.jpg
 
 # Force re-execution of notebooks on each build.
