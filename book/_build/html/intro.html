@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CIMR L2 Sea Ice Concentration ATBD &#8212; CIMR L2 Sea Ice Concentration ATBD v1</title>
+    <title>CIMR L2 SIC, SIE, and SIC1H ATBD &#8212; CIMR L2 SIC, SIE, and SIC1H ATBD v1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -83,7 +83,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">CIMR L2 Sea Ice Concentration ATBD v1</h1>
+      <h1 class="site-logo" id="site-title">CIMR L2 SIC, SIE, and SIC1H ATBD v1</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -94,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   CIMR L2 Sea Ice Concentration ATBD
+   CIMR L2 SIC, SIE, and SIC1H ATBD
   </a>
  </li>
 </ul>
@@ -255,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>CIMR L2 Sea Ice Concentration ATBD</h1>
+                <h1>CIMR L2 SIC, SIE, and SIC1H ATBD</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -266,9 +266,17 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="cimr-l2-sea-ice-concentration-atbd">
-<h1>CIMR L2 Sea Ice Concentration ATBD<a class="headerlink" href="#cimr-l2-sea-ice-concentration-atbd" title="Permalink to this headline">¶</a></h1>
-<p>This document describes the algorithm theoretical basis for the Sea Ice Concentration (SIC) Level-2 product.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="cimr-l2-sic-sie-and-sic1h-atbd">
+<h1>CIMR L2 SIC, SIE, and SIC1H ATBD<a class="headerlink" href="#cimr-l2-sic-sie-and-sic1h-atbd" title="Permalink to this headline">¶</a></h1>
+<p>This document describes the algorithm theoretical basis for three closely related CIMR Level-2 products:</p>
+<ol class="simple">
+<li><p>the nominal Sea Ice Concentration (SIC) Level-2 product (<a class="reference internal" href="acronyms.html#term-SIC3H"><span class="xref std std-term">SIC3H</span></a>);</p></li>
+<li><p>the nominal Sea Ice Edge (SIE) Level-2 product (<a class="reference internal" href="acronyms.html#term-SIE"><span class="xref std std-term">SIE</span></a>);</p></li>
+<li><p>the Sea Ice Concentration (SIC) Level-2 product with <a class="reference internal" href="definitions.html#term-Near-Real-Time-1H"><span class="xref std std-term">Near Real Time 1H</span></a> latency requirement.</p></li>
+</ol>
+<p>At this stage, these three products are documented in a single document because they share a large
+fraction of justification, approach, and software prototype code. For example, the SIE product is
+derived from the SIC product. This can be reconsidered at a later stage.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="abstract.html">Abstract</a></li>

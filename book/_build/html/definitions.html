@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Definitions used in this ATBD &#8212; CIMR L2 Sea Ice Concentration ATBD v1</title>
+    <title>Definitions used in this ATBD &#8212; CIMR L2 SIC, SIE, and SIC1H ATBD v1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introduction, purpose and scope" href="introduction_purpose_scope.html" />
@@ -84,7 +86,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">CIMR L2 Sea Ice Concentration ATBD v1</h1>
+      <h1 class="site-logo" id="site-title">CIMR L2 SIC, SIE, and SIC1H ATBD v1</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -95,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   CIMR L2 Sea Ice Concentration ATBD
+   CIMR L2 SIC, SIE, and SIC1H ATBD
   </a>
  </li>
 </ul>
@@ -271,11 +273,29 @@ const thebe_selector_output = ".output, .cell_output"
 <span id="sec-definitions"></span><h1>Definitions used in this ATBD<a class="headerlink" href="#definitions-used-in-this-atbd" title="Permalink to this headline">¶</a></h1>
 <p>Here follows a glossary, or list of definitions</p>
 <dl class="glossary simple">
-<dt id="term-Sea-Ice-Concentration">Sea Ice Concentration<a class="headerlink" href="#term-Sea-Ice-Concentration" title="Permalink to this term">¶</a></dt><dd><p>The Sea Ice Concentration is the fraction of the sea surface covered by sea ice. It is a measure of the amount of sea ice in a given area. It is usually expressed as a percentage.</p>
-</dd>
 <dt id="term-Copernicus-Imaging-Microwave-Radiometer">Copernicus Imaging Microwave Radiometer<a class="headerlink" href="#term-Copernicus-Imaging-Microwave-Radiometer" title="Permalink to this term">¶</a></dt><dd><p>The Copernicus Imaging Microwave Radiometer is a Microwave Radiometer which launch is planned by ESA in 2029.</p>
 </dd>
-<dt id="term-Equal-Area-Scalable-Earth-v2">Equal Area Scalable Earth v2<a class="headerlink" href="#term-Equal-Area-Scalable-Earth-v2" title="Permalink to this term">¶</a></dt><dd><p>Equal area projection grid definition based on a Lambert Azimuthal projection and a WGS84 datum. Defined in <span id="id1">[]</span>.</p>
+<dt id="term-Equal-Area-Scalable-Earth-v2">Equal Area Scalable Earth v2<a class="headerlink" href="#term-Equal-Area-Scalable-Earth-v2" title="Permalink to this term">¶</a></dt><dd><p>Equal area projection grid definition based on a Lambert Azimuthal projection and a WGS84 datum. Defined in <span id="id1">Brodzik <em>et al.</em> [<a class="reference internal" href="references.html#id3" title="M. J. Brodzik, B. Billingsley, T. Haran, B. Raup, and M. H. Savoie. EASE-Grid 2.0: incremental but significant improvements for earth-gridded data sets. ISPRS International Journal of Geo-Information, 1(1):32 – 45, 2012. doi:10.3390/ijgi1010032.">2012</a>]</span>.</p>
+</dd>
+<dt id="term-Near-Real-Time-1H">Near Real Time 1H<a class="headerlink" href="#term-Near-Real-Time-1H" title="Permalink to this term">¶</a></dt><dd><p>Product delivered in <span class="math notranslate nohighlight">\(\le\)</span>1 hour to the point of user pickup after data acquisition by the satellite. NRT1H products are used for nowcasting operational applications
+(e.g. navigation bulletins in the Arctic) from sea ice services, operational oceanography and meteorology.</p>
+</dd>
+<dt id="term-Near-Real-Time-3H">Near Real Time 3H<a class="headerlink" href="#term-Near-Real-Time-3H" title="Permalink to this term">¶</a></dt><dd><p>Product delivered in <span class="math notranslate nohighlight">\(\le\)</span>3 hour to the point of user pickup after data acquisition by the satellite. NRT3H products are used for operational applications such as sea ice services,
+operational oceanography and meteorology.</p>
+</dd>
+<dt id="term-Nscanl">Nscanl<a class="headerlink" href="#term-Nscanl" title="Permalink to this term">¶</a></dt><dd><p>Number of scanlines</p>
+</dd>
+<dt id="term-Nscanp">Nscanp<a class="headerlink" href="#term-Nscanp" title="Permalink to this term">¶</a></dt><dd><p>Number of positions along the scans</p>
+</dd>
+<dt id="term-Sea-Ice-Concentration">Sea Ice Concentration<a class="headerlink" href="#term-Sea-Ice-Concentration" title="Permalink to this term">¶</a></dt><dd><p>The Sea Ice Concentration is the fraction of the sea surface covered by sea ice. It is a measure of the amount of sea ice in a given area. It is usually expressed as a percentage.
+The latency requirement for the nominal CIMR Level-2 SIC product is <a class="reference internal" href="#term-Near-Real-Time-3H"><span class="xref std std-term">Near Real Time 3H</span></a>.</p>
+</dd>
+<dt id="term-Sea-Ice-Concentration-1H">Sea Ice Concentration 1H<a class="headerlink" href="#term-Sea-Ice-Concentration-1H" title="Permalink to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-Sea-Ice-Concentration"><span class="xref std std-term">Sea Ice Concentration</span></a> but with a <a class="reference internal" href="#term-Near-Real-Time-1H"><span class="xref std std-term">Near Real Time 1H</span></a> requirement.</p>
+</dd>
+<dt id="term-Sea-Ice-Concentration-3H">Sea Ice Concentration 3H<a class="headerlink" href="#term-Sea-Ice-Concentration-3H" title="Permalink to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-Sea-Ice-Concentration"><span class="xref std std-term">Sea Ice Concentration</span></a></p>
+</dd>
+<dt id="term-Sea-Ice-Edge">Sea Ice Edge<a class="headerlink" href="#term-Sea-Ice-Edge" title="Permalink to this term">¶</a></dt><dd><p>Sea Ice Edge is a binary product indicating where the sea ice cover is. By extension it can be a binary mask showing classes of <code class="docutils literal notranslate"><span class="pre">term</span></code>{Sea Ice Concentration}. The CIMR
+Level-2 <a class="reference internal" href="acronyms.html#term-SIE"><span class="xref std std-term">SIE</span></a> product is derived from the results of the Level-2 <a class="reference internal" href="acronyms.html#term-SIC"><span class="xref std std-term">SIC</span></a> processing, and has a <a class="reference internal" href="#term-Near-Real-Time-3H"><span class="xref std std-term">Near Real Time 3H</span></a> latency requirement.</p>
 </dd>
 </dl>
 </div>
