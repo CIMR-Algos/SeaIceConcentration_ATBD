@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: CIMR L2 Sea Ice Concentration ATBD v1
+title: CIMR L2 SIC, SIE, and SIC1H ATBD v1
 author: Thomas Lavergne, Norwegian Meteorological Institute
 logo: logo.jpg
 
