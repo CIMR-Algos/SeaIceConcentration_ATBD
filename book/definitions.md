@@ -19,9 +19,15 @@ Near Real Time 3H
     Product delivered in $\le$3 hour to the point of user pickup after data acquisition by the satellite. NRT3H products are used for operational applications such as sea ice services,
     operational oceanography and meteorology.
 
+Nscanl
+    Number of scanlines
+
+Nscanp
+    Number of positions along the scans
+
 Sea Ice Concentration
     The Sea Ice Concentration is the fraction of the sea surface covered by sea ice. It is a measure of the amount of sea ice in a given area. It is usually expressed as a percentage.
-    The default latency requirement for CIMR Level-2 SIC product is {term}`Near Real Time 3H`.
+    The latency requirement for the nominal CIMR Level-2 SIC product is {term}`Near Real Time 3H`.
 
 Sea Ice Concentration 1H
     See {term}`Sea Ice Concentration` but with a {term}`Near Real Time 1H` requirement.
