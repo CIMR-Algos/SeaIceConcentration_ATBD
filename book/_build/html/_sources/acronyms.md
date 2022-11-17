@@ -3,6 +3,9 @@
 Here follows a formatted list of acronyms.
 
 ```{glossary}
+AMSR
+    Advanced Microwave Scanning Radiometer
+
 ATBD
     Algorithm Theoretical Basis Document
 
@@ -51,8 +54,14 @@ SIC3H
 SIE
     {term}`Sea Ice Edge`
 
+SMMR
+    Scanning Multichannel Microwave Radiometer
+
 SSM/I
     Special Sensor Microwave Imager
+
+SSMIS
+    Special Sensor Microwave Imager/Sounder
 
 TB
     Brightness Temperature
