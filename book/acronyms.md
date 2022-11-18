@@ -3,7 +3,8 @@
 Here follows a formatted list of acronyms.
 
 ```{glossary}
-AMSR
+AMSR2
+AMSR-E
     Advanced Microwave Scanning Radiometer
 
 ATBD

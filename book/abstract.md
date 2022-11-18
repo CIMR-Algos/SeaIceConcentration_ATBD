@@ -12,7 +12,7 @@ variable when it comes to weather, ocean, and sea ice forecasting in the polar r
 satellite-based products of {term}`SIC` to guide there forecasts.
 
 Sea ice concentration has been derived from satellite passive microwave imagery for the over 40 years. The U.S. passive microwave missions
-{term}`SMMR`, {term}{SSM/I}, and {term}`SSMIS` have been the workhorse of climate monitoring of sea-ice concentration / extent / area since
+{term}`SMMR`, {term}`SSM/I`, and {term}`SSMIS` have been the workhorse of climate monitoring of sea-ice concentration / extent / area since
 the late 1970s. In the last two decades, the Japanese missions {term}`AMSR-E` and {term}`AMSR2` have allowed higher spatial resolution but
 at the cost of larger retrieval uncertainties (using high-frequency microwave imagery that the atmosphere between the surface and the satellite
 perturbe more). The {term}`Copernicus Imaging Microwave Radiometer` (CIMR) will bring higher resolution at the low-frequency "window" microwave
