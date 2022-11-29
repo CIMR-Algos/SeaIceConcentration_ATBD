@@ -36,6 +36,6 @@ Sea Ice Concentration 3H
     See {term}`Sea Ice Concentration`
 
 Sea Ice Edge
-    Sea Ice Edge is a binary product indicating where the sea ice cover is. By extension it can be a binary mask showing classes of `term`{Sea Ice Concentration}. The CIMR
+    Sea Ice Edge is a binary product indicating where the sea ice cover is. By extension it can be a binary mask showing classes of {term}`Sea Ice Concentration`. The CIMR
     Level-2 {term}`SIE` product is derived from the results of the Level-2 {term}`SIC` processing, and has a {term}`Near Real Time 3H` latency requirement.
 ```
