@@ -43,6 +43,9 @@ Ocean and Sea Ice Satellite Application Facility
     cover relevant for Numerical Weather Prediction and Marine Forecasting services. Led by Météo-France
     and part of the distributed ground segment of EUMETSAT.
 
+Open Water
+    In this context, ocean surface with no sea ice (0% SIC).
+
 Sea Ice Concentration
     The Sea Ice Concentration is the fraction of the sea surface covered by sea ice. It is a measure of the amount of sea ice in a given area. It is usually expressed as a percentage.
     The latency requirement for the nominal CIMR Level-2 SIC product is {term}`Near Real Time 3H`.

@@ -22,14 +22,6 @@ chapters:
   title: Baseline Algorithm Definition
 - file: algorithm_input_output_data_definition
   title: Algorithm Input and Output Data Definition (IODD)
-- file: algorithm_performance_assessment
-  title: Algorithm Performance Assessment 
-- file: markdown-notebooks
-  title: Notebook comments
-- file: notebooks
-  title: Python notebook placeholder
 - file: references
-  title: References (example)
-- file: annex
-  title: Annex
+  title: References
 
