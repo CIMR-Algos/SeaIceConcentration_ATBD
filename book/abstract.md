@@ -13,9 +13,9 @@ satellite-based products of {term}`SIC` to guide there forecasts. Polar {term}`S
 mission and a prototype {term}`SIC3H` Level-2 algorithm is detailed in the following pages.
 
 Timely information about SIC is also critical for safe navigation in ice-infested areas, which is why a dedicated {term}`SIC1H` Level-2
-algorithm is needed for the {term}`CIMR` mission. In addition, Sea Ice Edge ({term}`SIE`) is a binary product derived from SIC to quickly
+algorithm is needed for the {term}`CIMR` mission. In addition, Sea Ice Edge ({term}`SIED`) is a binary product derived from SIC to quickly
 indicate where there is sea ice and where the ocean is free for ice. It is typically derived from a simple binary test involving a SIC
 threshold, classically 15% SIC (all regions with SIC larger than the threshold are considere
-ice-covered). From the binary product, one can derive the contour polygon of the ice cover. A prototype Level-2 {term}`SIE` algorithm is
+ice-covered). From the binary product, one can derive the contour polygon of the ice cover. A prototype Level-2 {term}`SIED` algorithm is
 thus described in the following pages.
 
