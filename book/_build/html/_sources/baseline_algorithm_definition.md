@@ -344,6 +344,7 @@ dedicated variable of the Level-2 product file.
 High water vapour content in the tropics can fool the SIC algorithms in returning high SIC values. A monthly varying maximum sea-ice climatology mask is applied to the L1B swath to only compute the Level-2 SICs
 in the polar regions. Field-of-views outside the maximum climatology mask are either removed from the Level-2 product file, or set to 0% SIC.
 
+(sec_pansharpen)=
 #### Enhanced-resolution SICs using pan-sharpening
 
 The sections above described generically how intermediate SIC fields can be prepared from different channel combinations of CIMR's imagery (`CKA`, `KUKA`, `KA`). As a result of the input channels, these intermediate SIC fields will have different
@@ -393,49 +394,56 @@ At this stage, we cannot foresee what is the combination of intermediate SICs th
 We thus write this ATBD considering several options for SIC fields in the final Level-2 product file ({numref}`fig_sic_concept`). These candidate combinations are listed in {numref}`pansharp`.
 
 
-### Forward Model
-
-Subsection Text
-
-
 ### CIMR Level-1b re-sampling approach
 
-Subsection Text
+The CIMR Level-2 SIC algorithm involves re-sampling and re-mapping at two stages. The Level-1b brightness
+temperature samples must be remapped on common location and resolution before applying the `CKA`, `KUKA`,
+and `KA` algorithms ({numref}`fig_sic_concept`). At a later stage, the intermediate SICs $C_{CKA}$, $C_{KUKA}$, and $C_{KA}$ must be re-sampled
+and re-mapped as part of the pan-sharpening step ({ref}`sec_pansharpen`).
 
+At the time of writing, the exact method for re-sampling and re-mapping is not defined. The method
+might depend on which algorithm is to be applied. For example, the `CKA` algorithm might benefit
+from a Backus-Gilbert approach that takes advantage of the overlap of C-band FoVs. On the other hand,
+`KUKA` and `KA` do not involve much overlap between neighbouring FoVs and can thus probably be
+handled with simpler methods.
 
 ### Algorithm Assumptions and Simplifications
 
-Subsection Text
+There are several assumptions and simplifications embedded in the selected algorithm. We describe the
+main ones below.
 
-### Level-2 end to end algorithm functional flow diagram
+#### Linear scaling of TB with SIC
+The basis for most SIC algorithms (including the one selected here) is that an increase in 
+SIC will result in an increase in observed TB. This assumes that the atmosphere is transparent
+which is mostly the case at polar latitudes for the CIMR frequencies. If the atmosphere is
+not transparent enough, corrections based on {term}`RTM` can be used to return to a state
+where the basis linearity hypothesis is valid.
 
-Subsection Text
+#### Large-scale validity of the tie-points
+Tie-points are TB values that are characteristics of pure surface (e.g. {term}`OW`, {term}`FYI`, etc...)
+These are typically defined once for all, but can also be adapted on a daily basis as is done in the
+OSI SAF processing chains. Irrespective of their update frequency, the tie-points are then used for
+all TB observations in a specific hemisphere, irrespective of the sub-region observed. The tie-points
+are considered to capture the average sea ice conditions, but regional variability in emissivity
+exist, and can lead to regional over/under-estimation of the SIC. Region-specific tie-points might
+be required for monitoring ice on fresh or brackwish waters.
 
-### Functional description of each Algorithm step
+#### Under-estimation of thin sea ice
 
-Subsection Text
+Due to many factors (including smooth surface, absence of snow, brine content) concentration of thin sea-ice
+(<30 cm) is underestimated by most of the PMW SIC algorithms {cite:p}`cavalieri:1994:nasaT`. A complete, 100 % cover
+of thin sea ice will be retrieved with a lower concentration, depending on the thickness and the
+microwave frequencies used in the algorithm {cite:p}`ivanova:2015:sicci1`. This underestimation is
+largest for lower frequencies such as L- or C-band.
 
-##### Mathematical description
+#### Land spill-over
 
-SubSubsection Text
-##### Input data
+The radiometric signature of land is similar to that of sea ice at the wavelengths used for estimating the SIC.
+Because of the large footprints and the relatively high brightness temperatures of land and ice compared to
+water, the land signature “spills” into the coastal zone open water and it will falsely appear as
+intermediate concentration ice.
 
-SubSubsection Text
-
-##### Output data
-
-SubSubsection Text
-
-##### Auxiliary data
-
-SubSubsection Text
-
-##### Ancillary data
-
-SubSubsection Text
-
-##### Validation process
-
-SubSubsection Text
-
+This land-spillover effect can be partly corrected by estimating the fractional contribution of land surface
+to each Level-1B sample or FoV. However, coastal correction procedures are not perfect, and some false
+sea ice might remain along some coastlines and in fjords.
 

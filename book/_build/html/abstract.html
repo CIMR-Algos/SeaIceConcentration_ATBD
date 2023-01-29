@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abstract &#8212; CIMR L2 SIC, SIE, and SIC1H ATBD v1</title>
+    <title>Abstract &#8212; CIMR L2 SIC, SIED, and SIC1H ATBD v1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Applicable and reference documents" href="applicable_ref_docs.html" />
-    <link rel="prev" title="CIMR L2 SIC, SIE, and SIC1H ATBD" href="intro.html" />
+    <link rel="prev" title="CIMR L2 SIC, SIED, and SIC1H ATBD" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -84,7 +84,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">CIMR L2 SIC, SIE, and SIC1H ATBD v1</h1>
+      <h1 class="site-logo" id="site-title">CIMR L2 SIC, SIED, and SIC1H ATBD v1</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -95,7 +95,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   CIMR L2 SIC, SIE, and SIC1H ATBD
+   CIMR L2 SIC, SIED, and SIC1H ATBD
   </a>
  </li>
 </ul>
@@ -277,26 +277,14 @@ communities.</p>
 <p>The area fraction of sea ice is also commonly named the <a class="reference internal" href="definitions.html#term-Sea-Ice-Concentration"><span class="xref std std-term">Sea Ice Concentration</span></a> (SIC). It is a unitless number (the ratio of two
 areas) and is reported either as a number in the range [0;1] or as a percentage in the range [0-100%]. SIC is by far the most important
 variable when it comes to weather, ocean, and sea ice forecasting in the polar regions, and virually all operational centers assimilate
-satellite-based products of <a class="reference internal" href="acronyms.html#term-SIC"><span class="xref std std-term">SIC</span></a> to guide there forecasts.</p>
-<p>Sea ice concentration has been derived from satellite passive microwave imagery for the over 40 years. The U.S. passive microwave missions
-<span class="xref std std-term">SMMR</span>, {term}{SSM/I}, and <span class="xref std std-term">SSMIS</span> have been the workhorse of climate monitoring of sea-ice concentration / extent / area since
-the late 1970s. In the last two decades, the Japanese missions <span class="xref std std-term">AMSR-E</span> and <span class="xref std std-term">AMSR2</span> have allowed higher spatial resolution but
-at the cost of larger retrieval uncertainties (using high-frequency microwave imagery that the atmosphere between the surface and the satellite
-perturbe more). The <a class="reference internal" href="definitions.html#term-Copernicus-Imaging-Microwave-Radiometer"><span class="xref std std-term">Copernicus Imaging Microwave Radiometer</span></a> (CIMR) will bring higher resolution at the low-frequency “window” microwave
-channels, allowring high resolution and high accuracy for many operational applications.</p>
-<p>Key assets of CIMR in terms of sea-ice concentration monitoring are the high resolution (4-5 km) capabilities at Ku- and Ka-band, two microwave
-frequencies that are at the core of most state-of-the-art sea-ice concentration algorithms today and medium resolution (15 km) capabilities at
-C-band, a channel where the the atmosphere is mostly transparent and the sea-ice emissivities do not vary too much with sea-ice type. In
-addition, the swath width and especially the “no hole at the pole” capability will improve coverage of sea ice monitoring in the Arctic. The
-availability of a forward and a backward scan should be exploited.</p>
-<p>CIMR has a requirement to provide a set of Level-2 products with 1 hour latency (see <a class="reference internal" href="definitions.html#term-Near-Real-Time-1H"><span class="xref std std-term">Near Real Time 1H</span></a>), the first of which SIC, for
-supporting safety at sea in Arctic regions. This requirement is translated in a dedicated <a class="reference internal" href="acronyms.html#term-SIC1H"><span class="xref std std-term">SIC1H</span></a> Level-2 product that has to achieve
-high resolution within a short latency. This might lead to reduced accuracy wrt to the nominal <a class="reference internal" href="acronyms.html#term-SIC3H"><span class="xref std std-term">SIC3H</span></a> product. Typically, it means
-the SIC1H algorithm should focus on Ku- and Ka-band imagery and potential skip some parts of the <a class="reference internal" href="acronyms.html#term-SIC3H"><span class="xref std std-term">SIC3H</span></a> algorithm, e.g. atmospheric correction
-of the brightness temperatures or deriving uncertainty estimates.</p>
-<p>Sea Ice Edge (<a class="reference internal" href="acronyms.html#term-SIE"><span class="xref std std-term">SIE</span></a>)  is a binary product derived from SIC to quickly indicate where there is sea ice and where the ocean is free for ice. It is
-typically derived from a simple binary test involving a SIC threshold, classically 15% SIC (all regions with SIC larger than the threshold are considere
-ice-covered). From the binary product, one can derive the contour polygon of the ice cover.</p>
+satellite-based products of <a class="reference internal" href="acronyms.html#term-SIC"><span class="xref std std-term">SIC</span></a> to guide there forecasts. Polar <a class="reference internal" href="acronyms.html#term-SIC"><span class="xref std std-term">SIC</span></a> is a key requirement for the <a class="reference internal" href="definitions.html#term-Copernicus-Imaging-Microwave-Radiometer"><span class="xref std std-term">Copernicus Imaging Microwave Radiometer</span></a> (CIMR)
+mission and a prototype <a class="reference internal" href="acronyms.html#term-SIC3H"><span class="xref std std-term">SIC3H</span></a> Level-2 algorithm is detailed in the following pages.</p>
+<p>Timely information about SIC is also critical for safe navigation in ice-infested areas, which is why a dedicated <a class="reference internal" href="acronyms.html#term-SIC1H"><span class="xref std std-term">SIC1H</span></a> Level-2
+algorithm is needed for the <a class="reference internal" href="acronyms.html#term-CIMR"><span class="xref std std-term">CIMR</span></a> mission. In addition, Sea Ice Edge (<a class="reference internal" href="acronyms.html#term-SIED"><span class="xref std std-term">SIED</span></a>) is a binary product derived from SIC to quickly
+indicate where there is sea ice and where the ocean is free for ice. It is typically derived from a simple binary test involving a SIC
+threshold, classically 15% SIC (all regions with SIC larger than the threshold are considere
+ice-covered). From the binary product, one can derive the contour polygon of the ice cover. A prototype Level-2 <a class="reference internal" href="acronyms.html#term-SIED"><span class="xref std std-term">SIED</span></a> algorithm is
+thus described in the following pages.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -328,7 +316,7 @@ ice-covered). From the binary product, one can derive the contour polygon of the
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">CIMR L2 SIC, SIE, and SIC1H ATBD</p>
+            <p class="prev-next-title">CIMR L2 SIC, SIED, and SIC1H ATBD</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="applicable_ref_docs.html" title="next page">

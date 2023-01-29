@@ -3,7 +3,8 @@
 Here follows a formatted list of acronyms.
 
 ```{glossary}
-AMSR
+AMSR2
+AMSR-E
     Advanced Microwave Scanning Radiometer
 
 ATBD
@@ -11,6 +12,15 @@ ATBD
 
 EASE2
     {term}`Equal Area Scalable Earth v2`
+
+CCI
+    {term}`Climate Change Initiative`
+
+CI
+    {term}`Consolidated Ice`
+
+CIMR
+    {term}`Copernicus Imaging Microwave Radiometer`
 
 DAL
     Distance Along the (ice) Line
@@ -27,6 +37,9 @@ L1B
 MIZ
     Marginal Ice Zone
 
+MWI
+    {term}`MicroWave Imager`
+
 MYI
     MultiYear ice
 
@@ -35,6 +48,12 @@ NRT1H
 
 NRT3H
     {term}`Near Real Time 3H`
+
+OSI SAF
+    {term}`Ocean and Sea Ice Satellite Application Facility`
+
+OW
+    Open Water
 
 OWF
     Open Water Filter
@@ -51,7 +70,7 @@ SIC1H
 SIC3H
     {term}`Sea Ice Concentration 3H`
 
-SIE
+SIED
     {term}`Sea Ice Edge`
 
 SMMR

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction, purpose and scope &#8212; CIMR L2 SIC, SIE, and SIC1H ATBD v1</title>
+    <title>Introduction, purpose and scope &#8212; CIMR L2 SIC, SIED, and SIC1H ATBD v1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Background and justification of selected algorithm" href="background_justification_algorithm.html" />
@@ -86,7 +84,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">CIMR L2 SIC, SIE, and SIC1H ATBD v1</h1>
+      <h1 class="site-logo" id="site-title">CIMR L2 SIC, SIED, and SIC1H ATBD v1</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -97,7 +95,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   CIMR L2 Sea Ice Concentration ATBD
+   CIMR L2 SIC, SIED, and SIC1H ATBD
   </a>
  </li>
 </ul>
@@ -251,24 +249,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#here-is-an-example-of-a-table-with-a-label">
-   Here is an example of a table with a label
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Seasons
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -281,24 +261,6 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#here-is-an-example-of-a-table-with-a-label">
-   Here is an example of a table with a label
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Seasons
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -307,100 +269,57 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="introduction-purpose-and-scope">
 <h1>Introduction, purpose and scope<a class="headerlink" href="#introduction-purpose-and-scope" title="Permalink to this headline">¶</a></h1>
-<p>Here comes an introduction and the purpose and scope of the ATBD</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is an example of a note</p>
+<p><a class="reference internal" href="definitions.html#term-Sea-Ice-Concentration"><span class="xref std std-term">Sea Ice Concentration</span></a> (SIC), aka sea-ice area fraction, measures the fraction of a pre-defined ocean area (sensor footprint, grid cell,…) that is covered by sea ice.
+SIC is unitless and can equally be reported in the range [0,1] as well as [0%,100%].</p>
+<p>The retrieval of SIC from space-borne passive microwave radiometer (PMR) data has a long and successful history <span id="id1">[<a class="reference internal" href="references.html#id5" title="D. J. Cavalieri, P. Gloersen, and W. J. Campbell. Determination of sea ice parameters with the NIMBUS 7 SMMR. Journal of Geophysical Research: Atmospheres, 89(D4):5355-5369, 1984. doi:https://doi.org/10.1029/JD089iD04p05355.">Cavalieri <em>et al.</em>, 1984</a>, <a class="reference internal" href="references.html#id7" title="J. C. Comiso. Characteristics of arctic winter sea ice from satellite multispectral microwave observations. Journal of Geophysical Research: Oceans, 91(C1):975-994, 1986. doi:https://doi.org/10.1029/JC091iC01p00975.">Comiso, 1986</a>]</span>. The retrieval is based
+on the contrast in emissivity (ε), and thus brightness temperature (<a class="reference internal" href="acronyms.html#term-TB"><span class="xref std std-term">TB</span></a>), between open water (low ε, low TB) and sea ice (high ε, high TB). This contrast depends on frequency,
+polarization, and type of sea-ice observed, as illustrated in <a class="reference internal" href="#fig-emis"><span class="std std-numref">Fig. 1</span></a>.</p>
+<div class="figure align-default" id="fig-emis">
+<img alt="_images/sea_ice_emis.png" src="_images/sea_ice_emis.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Average top of atmosphere brightness temperatures (TB) and standard deviations of Arctic open water (<a class="reference internal" href="acronyms.html#term-OW"><span class="xref std std-term">OW</span></a>), first-year (<a class="reference internal" href="acronyms.html#term-FYI"><span class="xref std std-term">FYI</span></a>) and multiyear (<a class="reference internal" href="acronyms.html#term-MYI"><span class="xref std std-term">MYI</span></a>) sea ice.
+Data from 6.9 to 89 GHz based on AMSR-E/2 observations with incidence angle 55°, at 1.4 GHz on SMOS observations averaged over 50° to 55° incidence angle, collected for footprints
+with pure surface types in the Round Robin data package of the ESA Climate Change Initiative project on sea ice <span id="id2">[<a class="reference internal" href="references.html#id16" title="Leif Toudal Pedersen, Roberto Saldo, Natalia Ivanova, Stefan Kern, Georg Heygster, Rasmus Tonboe, Marcus Huntemann, Burcu Ozsoy, Fanny Ardhuin, and Lars Kaleschke. Reference dataset for sea ice concentration. 11 2021. URL: https://figshare.com/articles/dataset/Reference_dataset_for_sea_ice_concentration/6626549, doi:10.6084/m9.figshare.6626549.v7.">Pedersen <em>et al.</em>, 2021</a>]</span>. Solid lines denote vertically
+polarized TBs, and H horizontally. Note that lines connecting the TBs are meant for easy reading, but not for interpolation between the observation frequencies. Source: <span id="id3">Lu and Heygster [<a class="reference internal" href="references.html#id13" title="Junshen Lu and Georg Heygster. AMSR-E/2 and SMOS Brightness Temperatures of Surface Types. 11 2018. URL: https://figshare.com/articles/figure/amsre2_SMOS_tie_points_png/7370261, doi:10.6084/m9.figshare.7370261.v2.">2018</a>]</span>.</span><a class="headerlink" href="#fig-emis" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="here-is-an-example-of-a-table-with-a-label">
-<h2>Here is an example of a table with a label<a class="headerlink" href="#here-is-an-example-of-a-table-with-a-label" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table" id="gridscdr">
-<thead>
-<tr class="row-odd"><th class="head"><p>Id</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{n}_{x}\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{n}_{y}\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{A}_{x}\)</span> [km]</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{A}_{y}\)</span> [km]</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{B}_{x}\)</span> [km]</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{B}_{y}\)</span> [km]</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nh_ease2-750</span></code>, <code class="docutils literal notranslate"><span class="pre">sh_ease2-750</span></code></p></td>
-<td><p>144</p></td>
-<td><p>144</p></td>
-<td><p>75.0</p></td>
-<td><p>75.0</p></td>
-<td><p>-5375.0</p></td>
-<td><p>5375.0</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nh_ease2-250</span></code>, <code class="docutils literal notranslate"><span class="pre">sh_ease2-250</span></code></p></td>
-<td><p>432</p></td>
-<td><p>432</p></td>
-<td><p>25.0</p></td>
-<td><p>25.0</p></td>
-<td><p>-5387.5</p></td>
-<td><p>5387.5</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nh_ease2-125</span></code>, <code class="docutils literal notranslate"><span class="pre">sh_ease2-125</span></code></p></td>
-<td><p>864</p></td>
-<td><p>864</p></td>
-<td><p>12.5</p></td>
-<td><p>12.5</p></td>
-<td><p>-5393.75</p></td>
-<td><p>5393.75</p></td>
-</tr>
-</tbody>
-</table>
-<p>Here is a citation, <span id="id1">[]</span></p>
-<p>Here is an example of how to label a section:</p>
+<p>On <a class="reference internal" href="#fig-emis"><span class="std std-numref">Fig. 1</span></a> it appears clearly that better contrast between 0% SIC (Open Water, <a class="reference internal" href="acronyms.html#term-OW"><span class="xref std std-term">OW</span></a>) and 100% SIC (split here in two Arctic sea-ice types sea-ice  First Year Ice, <a class="reference internal" href="acronyms.html#term-FYI"><span class="xref std std-term">FYI</span></a>,
+and Multiyear Ice, <a class="reference internal" href="acronyms.html#term-MYI"><span class="xref std std-term">MYI</span></a>) is achieved with horizontal polarization (H-pol) radiation, and at low frequencies, e.g. L-band (1.4 GHz), C-band (6.9 GHz), and X-band (10.7 GHz).</p>
+<p>However, with real-aperture space-borne PMR sensors like <a class="reference internal" href="acronyms.html#term-SSMIS"><span class="xref std std-term">SSMIS</span></a>, <a class="reference internal" href="acronyms.html#term-AMSR2"><span class="xref std std-term">AMSR2</span></a>, and also <a class="reference internal" href="acronyms.html#term-CIMR"><span class="xref std std-term">CIMR</span></a>, the low frequency channels are those with coarsest spatial resolution. Even in
+the case of CIMR, the Level-2 SIC product cannot rely only on the L- or C-band imagery as the resulting spatial resolution would be too coarse.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The crux of designing SIC algorithms for passive microwave satellite missions is to achieve high retrieval accuracy (which calls for using the low-frequency channels) and high spatial
+resolution (which calls for using the higher-frequency channels) at the same time.</p>
 </div>
-<div class="section" id="id2">
-<h2>Seasons<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>The  sea-ice drift CDR has global coverage and thus cover all sea ice in
-the Northern Hemisphere (NH) and Southern Hemisphere (SH). The quality
-of the drift estimates vary with season, and it is convenient to refer
-to winter, summer, and transition periods. The definition of these
-periods are in .</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>Northern Hemisphere</p></th>
-<th class="head"><p>Southern Hemisphere</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Winter</p></td>
-<td><p>Nov - Apr</p></td>
-<td><p>Apr - Sept</p></td>
-</tr>
-<tr class="row-odd"><td><p>Spring</p></td>
-<td><p>May</p></td>
-<td><p>Oct</p></td>
-</tr>
-<tr class="row-even"><td><p>Summer</p></td>
-<td><p>Jun - Sept</p></td>
-<td><p>Nov - Feb</p></td>
-</tr>
-<tr class="row-odd"><td><p>Autumn</p></td>
-<td><p>Oct</p></td>
-<td><p>Mar</p></td>
-</tr>
-</tbody>
-</table>
-<p>Here is an example of how to insert and label images:</p>
-<div class="figure align-default" id="inv-params-nh">
-<img alt="_images/inv_params_nh_2013-2020_jul.jpg" src="_images/inv_params_nh_2013-2020_jul.jpg" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Figure caption here!</span><a class="headerlink" href="#inv-params-nh" title="Permalink to this image">¶</a></p>
+<p>This is further illustrated on <a class="reference internal" href="#fig-crux"><span class="std std-numref">Fig. 2</span></a>.</p>
+<div class="figure align-default" id="fig-crux">
+<img alt="_images/sic_crux_diagram.png" src="_images/sic_crux_diagram.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Illustration how spatial resolution (left y-axis) improves with increasing frequencies (x-axis) for the main three classes of passive microwave radiometer missions
+(SSM/I and <a class="reference internal" href="acronyms.html#term-MWI"><span class="xref std std-term">MWI</span></a> in purple, AMSR-E/2/3 in orange, and CIMR in yellow). The SIC retrieval uncertainties (right y-axis) get larger with frequency (blue line).
+The dashed horizontal line represents the objective for CIMR mission in terms of SIC: less than 5 km and less than 5% uncertainty.</span><a class="headerlink" href="#fig-crux" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="inv-params-sh">
-<img alt="_images/inv_params_sh_2012-2019_dec.jpg" src="_images/inv_params_sh_2012-2019_dec.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Second figure caption</span><a class="headerlink" href="#inv-params-sh" title="Permalink to this image">¶</a></p>
-</div>
-<p>These maps of parameters and residuals are saved in a monthly parameter
-file. In Figures <a class="reference internal" href="#inv-params-nh"><span class="std std-numref">Fig. 1</span></a> and <a class="reference internal" href="#inv-params-sh"><span class="std std-numref">Fig. 2</span></a>
-examples of these parameters are shown.</p>
-</div>
+<p><a class="reference internal" href="#fig-crux"><span class="std std-numref">Fig. 2</span></a> illustrates how the SSMIS and MWI do not meet the CIMR objectives in terms of resolution. AMSR-E/2/3 can meet the objective of spatial resolution,
+but not accuracy, by using its 89 GHz imagery channels. CIMR can meet both resolution and accuracy requirements, pending appropriate algorithms are designed and adopted.</p>
+<p>Key assets of <a class="reference internal" href="acronyms.html#term-CIMR"><span class="xref std std-term">CIMR</span></a> in terms of SIC monitoring are:</p>
+<ol class="simple">
+<li><p>high resolution (4-5 km) capabilities at Ku- and Ka-band, two microwave frequencies that are at the core of most state-of-the-art sea-ice concentration algorithms today;</p></li>
+<li><p>medium resolution (15 km) capabilities at C-band, a channel where the the atmosphere is mostly transparent and the sea-ice emissivities do not vary too much with sea-ice type;</p></li>
+<li><p>the swath width and especially the “no hole at the pole” capability to improve coverage of sea ice monitoring in the Arctic;</p></li>
+<li><p>the availability of a forward and a backward scan to improve the accuracy of retrievals.</p></li>
+</ol>
+<p>CIMR has a requirement to provide some Level-2 products with 1 hour latency (see <a class="reference internal" href="definitions.html#term-Near-Real-Time-1H"><span class="xref std std-term">Near Real Time 1H</span></a>), including SIC, to
+support safety at sea in Arctic regions. This requirement is translated in a dedicated <a class="reference internal" href="acronyms.html#term-SIC1H"><span class="xref std std-term">SIC1H</span></a> Level-2 product that has to achieve
+high resolution within a short latency. This might lead to reduced accuracy wrt to the nominal <a class="reference internal" href="acronyms.html#term-SIC3H"><span class="xref std std-term">SIC3H</span></a> product. Typically, it means
+the SIC1H algorithm should focus on Ku- and Ka-band imagery and potential skip some parts of the <a class="reference internal" href="acronyms.html#term-SIC3H"><span class="xref std std-term">SIC3H</span></a> algorithm, e.g. atmospheric correction
+of the brightness temperatures or deriving uncertainty estimates.</p>
+<p><a class="reference internal" href="definitions.html#term-Sea-Ice-Edge"><span class="xref std std-term">Sea Ice Edge</span></a> is a binary surface classification product derived from SIC. Users of the <a class="reference internal" href="acronyms.html#term-SIED"><span class="xref std std-term">SIED</span></a> product typically do not need
+to know how consolidated the sea-ice cover is, just that sea ice significantly covers an area. <a class="reference internal" href="acronyms.html#term-SIED"><span class="xref std std-term">SIED</span></a> can for example be used to mask
+FoVs and regions where other algorithms are not to be processed.</p>
+<p>This document presents prototype algorithms for three CIMR Level-2 products:</p>
+<ol class="simple">
+<li><p>the nominal Sea Ice Concentration (SIC) Level-2 product (<a class="reference internal" href="acronyms.html#term-SIC3H"><span class="xref std std-term">SIC3H</span></a>);</p></li>
+<li><p>the nominal Sea Ice Edge (SIED) Level-2 product (<a class="reference internal" href="acronyms.html#term-SIED"><span class="xref std std-term">SIED</span></a>);</p></li>
+<li><p>the Sea Ice Concentration (SIC) Level-2 product with <a class="reference internal" href="definitions.html#term-Near-Real-Time-1H"><span class="xref std std-term">Near Real Time 1H</span></a> latency requirement.</p></li>
+</ol>
 </div>
 
     <script type="text/x-thebe-config">

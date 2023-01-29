@@ -1,6 +1,6 @@
 # Level-2 product definition
 
-The CIMR Level-2 SIC, SIC1H, and SIE products are on instrument grid, thus with a ({term}`Nscanl`,{term}`Nscanp`) structure. We
+The CIMR Level-2 SIC, SIC1H, and SIED products are on instrument grid, thus with a ({term}`Nscanl`,{term}`Nscanp`) structure. We
 describe below the main variables for each type of products. Each product file will in addition have geolocation information
 (latitude and longiture) and attributes, that are not described here at this stage.
 
@@ -44,15 +44,15 @@ within sea-ice navigation safety (e.g. regional sea-ice drift and type monitorin
 
 ```
 
-## Sea Ice Edge (SIE)
+## Sea Ice Edge (SIED)
 
-{numref}`l2_sic_variables` define the content (TBC) of the Level-2 sea-ice edge ({term}`SIE`) product files.
+{numref}`l2_sic_variables` define the content (TBC) of the Level-2 sea-ice edge ({term}`SIED`) product files.
 
-```{table} NetCDF Group: Processed data (TBC) for SIE
+```{table} NetCDF Group: Processed data (TBC) for SIED
 :name: l2_sie_variables
 |  name                  | description | units | dimensions |
 |  --------------------- | ----- | ---- | ---- |
-|  ice_edge              | The main SIE variable: 0 for open water, 1 for sea ice. | n/a | (Nscanl,Nscanp) |
+|  ice_edge              | The main SIED variable: 0 for open water, 1 for sea ice. | n/a | (Nscanl,Nscanp) |
 |  probability_correct   | Probability ($P \in [0.5;1]$) of correct classification | n/a | (Nscanl,Nscanp) |
 |  status_flag   | A flag indicating status of retrieval, e.g. "nominal", "over land", \... | n/a | (Nscanl,Nscanp) |
 ```
