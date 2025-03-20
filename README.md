@@ -2,7 +2,8 @@
 
 This repository holds the ATBD (JupyterBook) v1 for a prototype Level-2 Sea Ice Concentraiton and Sea Ice Edge product for the CIMR mission.
 
-An HTML build of the ATBD is [online](https://cimr-algos.github.io/SeaIceConcentration_ATBD/intro.html).
+> [!IMPORTANT]
+> This repository holds v1 of the ATBD developed in CIMR DEVALGO. The final ATBD from DEVALGO resides [here](https://github.com/CIMR-Algos/SeaIceConcentration_ATBD_v2).
 
 The ATBD was developed in the context of the ESA-funded CIMR DEVALGO study (2022-2024) (contract 4000137493). More information on the DEVALGO study
 and other ATBDs it produced is available from [CIMR-Algos](https://github.com/CIMR-Algos).
